@@ -2,8 +2,6 @@ from fabric.contrib.files import append, exists, sed
 from fabric.api import env, local, run
 import random
 
-# print(env.hosts)
-# env.domain = 'staging.tlojewellery.com'
 
 REPO_URL = 'https://github.com/justin-tt/tdd_with_python'
 
