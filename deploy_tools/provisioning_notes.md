@@ -22,6 +22,7 @@ eg, on Ubuntu:
 
 * see gunicorn-systemd.template.service
 * replace SITENAME with, e.g., staging.my-domain.com
+* replace PATH_TO_ENVIRONMENT_FILE with /home/user/envFile (envFile contains environment variables e.g. USER_EMAIL)
 
 ## Folder structure:
 Assume we have a user account at /home/username

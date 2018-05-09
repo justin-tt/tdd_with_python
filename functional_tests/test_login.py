@@ -68,11 +68,12 @@ class LoginTest(FunctionalTest):
         try:
             inbox.user(test_email)
             inbox.pass_(os.environ['GMAIL_PASSWORD'])
-            while time.time() - start < 60:
+            while time.time() - start < 30:
                 # get 10 newest messages
                 count, _ = inbox.stat()
+                print(inbox)
                 # messes up if less than 10 emails in inbox, keeps retrieving the same one.
-                for i in reversed(range(max(1, count-2), count+1)):
+                for i in reversed(range(max(1, count-10), count+1)):
                     print('getting msg', i)
                     _, lines, _ = inbox.retr(i)
                     lines = [l.decode('utf8') for l in lines]
