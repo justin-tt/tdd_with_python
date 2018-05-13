@@ -54,7 +54,7 @@ class ItemValidationTest(FunctionalTest):
         # She accidentally tries to enter a duplicate item
         self.get_item_input_box().send_keys('Buy wellies')
         self.get_item_input_box().send_keys(Keys.ENTER)
-        
+       
         # She sees a helpful error message
         self.wait_for(lambda: self.assertEqual(
             self.get_error_element().text,
