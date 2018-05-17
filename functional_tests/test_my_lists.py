@@ -70,4 +70,4 @@ class MyListsTest(FunctionalTest):
         ))
 
         # deliberately failing this test to see screenshots via jenkins
-        self.fail()
+        # self.fail()
